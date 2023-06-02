@@ -34,7 +34,10 @@ export default function Filters({onFiltersChange}){
     //     onFiltersChange(destination, price, options, date);
     // },[destination,price,options,date])
 
-    onFiltersChange(destination, price, options, date);
+    // onFiltersChange(destination, price, options, date);
+    useEffect(() => {
+        onFiltersChange(destination, price, options, date);
+      }, [destination, price, options, date]);
 
     return(
         <div className="h-fit pb-3 my-0 border bg-[#003b95] rounded-lg shadow-sh1">

@@ -109,9 +109,9 @@ export default function Reviews() {
                 }}
                 ref={swiperRef}
             >
-                {[1,2,3,4,5,6,7,8,9].map((item) => {
+                {[1,2,3,4,5,6,7,8,9].map((item,index) => {
                 return (
-                    <SwiperSlide key={item.id} className="flex flex-col relative items-center justify-center w-[230px] h-[100%] border border-gray-300 shadow-lg p-5 pt-1 vsm:px-3 xs:px-1 rounded-lg">
+                    <SwiperSlide key={index} className="flex flex-col relative items-center justify-center w-[230px] h-[100%] border border-gray-300 shadow-lg p-5 pt-1 vsm:px-3 xs:px-1 rounded-lg">
                       {/* top name profile */}
                       <div className="flex items-center vsm:space-x-2 xs:space-x-1">
                         <Image height={37} width={37} className='rounded-full xs:ml-0 vsm:ml-1 shadow-md border border-gray-300' src='https://lh4.googleusercontent.com/-m1CPKSC6FZk/AAAAAAAAAAI/AAAAAAAAAF0/D5GjiKP6Fbk/photo.jpg?sz=50' alt='noImage' />

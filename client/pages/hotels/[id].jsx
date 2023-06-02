@@ -32,7 +32,7 @@ export default function Hotel(){
     const [openPopupLogin,setPopupLogin]=useState(false);
     const user=useSelector(state=>state.user);
     const userData=user?.token;
-    console.log(userData)
+    // console.log(userData)
 
     const handleClose=()=>{
         setReserveModal(false);
@@ -87,6 +87,7 @@ export default function Hotel(){
     }
 
     const {data,loading,error}=useFetch(`https://hotelspot.vercel.app/api/hotels/find/${id}`)
+    console.log(data)
 
     return(
         <>
@@ -126,7 +127,7 @@ export default function Hotel(){
                         <div className="p-3 flex flex-wrap space-y-1 justify-between">
                             {
                                 Photos.map((p,index)=>{
-                                    return <div className="w-[33%]" key={p.index}>
+                                    return <div className="w-[33%]" key={index}>
                                         <Image width={1070} height={350} className="w-[100%] object-cover cursor-pointer rounded-sm" src={p.src} alt='noImg' onClick={()=>handleOpen(index)} />
                                     </div>
                                 })
