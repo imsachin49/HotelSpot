@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Giant Sized Room",
+    "price": 1234,
+    "maxPeople": 2,
+    "desc": "Experience the ultimate comfort and luxury in our giant-sized room. With spacious interiors and a stunning view, this room is perfect for those seeking a truly remarkable stay. Enjoy the finest amenities and indulge in a relaxing ambiance during your visit.",
+    "roomNumbers": [
+      { "number": 101 },
+      { "number": 102 },
+      { "number": 103 },
+      { "number": 104 }
+    ]
+  },
+  {
+    "title": "Luxury Suite",
+    "price": 2000,
+    "maxPeople": 2,
+    "desc": "Indulge in the epitome of opulence with our exquisite luxury suite. Immerse yourself in the grandeur of elegant decor, spacious living areas, and exceptional amenities. Whether you are here for a romantic getaway or a business trip, this suite will exceed your expectations and provide an unforgettable experience.",
+    "roomNumbers": [
+      { "number": 201 },
+      { "number": 202 },
+      { "number": 203 },
+      { "number": 204 }
+    ]
+  },
+  {
+    "title": "Family Room",
+    "price": 1500,
+    "maxPeople": 4,
+    "desc": "Create wonderful memories with your family in our spacious and comfortable family room. Designed to accommodate the needs of both adults and children, this room offers ample space for relaxation and quality time together. Unwind and enjoy the delightful ambiance as you make the most of your family vacation.",
+    "roomNumbers": [
+      { "number": 301 },
+      { "number": 302 },
+      { "number": 303 },
+      { "number": 304 }
+    ]
+  },
+  {
+    "title": "Executive Suite",
+    "price": 1800,
+    "maxPeople": 2,
+    "desc": "Experience true luxury and sophistication in our exclusive executive suite. This refined accommodation boasts stylish interiors, modern amenities, and personalized service to cater to your every need. Ideal for business travelers or those seeking a lavish escape, this suite ensures a remarkable stay in an elegant setting.",
+    "roomNumbers": [
+      { "number": 401 },
+      { "number": 402 },
+      { "number": 403 },
+      { "number": 404 }
+    ]
+  },
+  {
+    "title": "Deluxe Room",
+    "price": 1000,
+    "maxPeople": 2,
+    "desc": "Relax and unwind in our deluxe room, where comfort meets affordability. Offering a cozy ambiance and all essential amenities, this room provides a pleasant retreat for both leisure and business travelers. Enjoy a peaceful night's sleep and wake up refreshed, ready to explore the wonders of the city.",
+    "roomNumbers": [
+      { "number": 501 },
+      { "number": 502 },
+      { "number": 503 },
+      { "number": 504 }
+    ]
+  },
+  {
+    "title": "Honeymoon Suite",
+    "price": 2500,
+    "maxPeople": 2,
+    "desc": "Celebrate your love and embark on a romantic journey in our enchanting honeymoon suite. With its intimate setting, luxurious amenities, and breathtaking views, this suite sets the stage for an unforgettable honeymoon or a special anniversary. Indulge in privacy, tranquility, and cherished moments with your loved one.",
+    "roomNumbers": [
+      { "number": 601 },
+      { "number": 602 },
+      { "number": 603 },
+      { "number": 604 }
+    ]
+  },
+  {
+    "title": "Standard Room",
+    "price": 800,
+    "maxPeople": 2,
+    "desc": "Experience comfort and convenience in our well-appointed standard room. Offering a pleasant atmosphere and essential amenities, this room provides a cozy haven for both solo travelers and couples. Enjoy a restful stay and take advantage of the hotel's facilities and services during your visit.",
+    "roomNumbers": [
+      { "number": 701 },
+      { "number": 702 },
+      { "number": 703 },
+      { "number": 704 }
+    ]
+  },
+  {
+    "title": "Penthouse Suite",
+    "price": 3500,
+    "maxPeople": 2,
+    "desc": "Elevate your stay to new heights with our luxurious penthouse suite. Set atop the hotel, this expansive suite offers unparalleled luxury, panoramic views, and top-of-the-line amenities. Pamper yourself with personalized service, private dining, and exclusive access to the hotel's premium facilities. This suite is designed for the discerning traveler seeking the utmost indulgence.",
+    "roomNumbers": [
+      { "number": 801 },
+      { "number": 802 },
+      { "number": 803 },
+      { "number": 804 }
+    ]
+  },
+  {
+    "title": "Business Room",
+    "price": 1200,
+    "maxPeople": 2,
+    "desc": "Stay productive and comfortable in our thoughtfully designed business room. Equipped with modern amenities and a dedicated workspace, this room caters to the needs of business travelers. Take advantage of the hotel's business center, high-speed internet, and other services to make your business trip efficient and successful.",
+    "roomNumbers": [
+      { "number": 901 },
+      { "number": 902 },
+      { "number": 903 },
+      { "number": 904 }
+    ]
+  },
+  {
+    "title": "Adjoining Rooms",
+    "price": 1600,
+    "maxPeople": 4,
+    "desc": "Experience the convenience and flexibility of our adjoining rooms. Perfect for families or groups traveling together, these rooms provide comfortable accommodations while allowing for privacy and togetherness as desired. Make the most of your stay with ample space and all the necessary amenities to ensure a memorable trip.",
+    "roomNumbers": [
+      { "number": 1001 },
+      { "number": 1002 },
+      { "number": 1003 },
+      { "number": 1004 }
+    ]
+  }
+]
