@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import {AiFillHeart} from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {RiLeafFill} from 'react-icons/ri'
@@ -9,14 +9,29 @@ import {BiMap} from 'react-icons/bi'
 import Link from 'next/link'
 import Image from "next/image"
 import {PhotosHotel} from './dummyData'
+import { useSelector } from 'react-redux'
+import axios from 'axios'
+import { set } from 'date-fns'
 
 export default function Card({item,index}){
-    const [isLiked,setIsLiked]=useState(false);
-    const handleLike=()=>{
-        setIsLiked(!isLiked)
-    }
-    console.log(item)
     let msg;
+    const user=useSelector(state=>state?.user?.user);
+    const [isLiked,setIsLiked]=useState(false);
+
+    useEffect(() => {
+        setIsLiked(item?.likes?.includes(user?._id));
+    }, [item._id, user._id]);
+
+    const handleLike=async()=>{
+        try {
+            const res=await axios.put(`http://localhost:8800/api/hotels/like/${item._id}`);
+            console.log(res.data);
+            setIsLiked(!isLiked);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
     if(item.rating>=4.5){
         msg='Exceptional'
     }else if(item.rating>=4 && item.rating<5){

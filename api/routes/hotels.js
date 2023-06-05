@@ -7,12 +7,17 @@ const {
     getHotelById,
     updateHotel,
     deleteHotel,
+    addOrRemoveLike,
     getByCountry,
     insertManyHotels,
     getByCityName,
     getByType,
     getHotelRooms
 }=require('../controllers/hotels');
+const {
+    verifyToken,
+    verifyAdmin
+}=require('../utilis/verify');
 
 // create a hotel
 router.post('/create',createHotel);
@@ -31,6 +36,9 @@ router.put('/:id',updateHotel);
 
 // delete hotel
 router.delete('/:id',deleteHotel);
+
+// like/dislike hotel
+router.put('/like/:id',verifyToken,addOrRemoveLike);
 
 // get by country
 router.get('/country',getByCountry);

@@ -67,6 +67,22 @@ const deleteHotel=async(req,res)=>{
     }
 }
 
+// like/dislike hotel:-
+const addOrRemoveLike=async(req,res)=>{
+    try {
+        const hotel=await Hotel.findById(req.params.id);
+        if(hotel.likes.includes(req.user.id)){
+            await hotel.updateOne({$pull:{likes:req.user.id}},{new:true});
+            res.status(200).json({msg:"Hotel removed from likes"})
+        }else{
+            await hotel.updateOne({$push:{likes:req.user.id}},{new:true});
+            res.status(200).json({msg:"Hotel added to likes"})
+        }
+    } catch (error) {
+        res.status(500).json({msg:error.message})
+    }
+}
+
 // get by country
 const getByCountry=async(req,res)=>{
     try {
@@ -137,4 +153,4 @@ const getHotelRooms=async(req,res)=>{
     }
 }
 
-module.exports={createHotel,getAllHotels,getHotels,getHotelById,updateHotel,deleteHotel,getByCountry,insertManyHotels,getByCityName,getByType,getHotelRooms}
+module.exports={createHotel,getAllHotels,getHotels,getHotelById,updateHotel,deleteHotel,addOrRemoveLike,getByCountry,insertManyHotels,getByCityName,getByType,getHotelRooms}
