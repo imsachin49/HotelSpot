@@ -6,7 +6,7 @@ import {HiStar} from 'react-icons/hi';
 import useFetch from '@/hooks/usefetch';
 
 const bodyContent=({item})=>{
-  console.log(item)
+  // console.log(item)
   return (
     <div>
       <p className='text-[1rem] font-bold text-black mt-0 p-0'>{item?.name}</p>

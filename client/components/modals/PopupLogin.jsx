@@ -42,7 +42,7 @@ export default function PopupLogin({onClose,hotelId}){
             </div>
             <p className='text-[1.3rem] text-gray-700 pb-3'>Hey there! Login or sign up to access exclusive features</p>
             <div className='flex justify-between p-4 px-0 mt-0'>
-                <div className={`flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-blue-400 border border-blue-200 shadow-lg rounded-[5px] bg-blue-500 items-center`}><BiArrowBack className="mr-[1px]"/>Cancel</div>
+                <div className={`flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-blue-400 border border-blue-200 shadow-lg rounded-[5px] bg-blue-500 items-center`} onClick={onClose}><BiArrowBack className="mr-[1px]"/>Cancel</div>
                 <Link href='/login' className={`flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-rose-400 border border-rose-200 shadow-lg rounded-[5px] bg-rose-500 items-center`}>Login<FiLogIn className="ml-[1px]"/></Link>
             </div>
         </div>

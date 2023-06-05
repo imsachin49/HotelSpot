@@ -11,13 +11,15 @@ import SwiperCore, { Navigation } from 'swiper';
 import Image from "next/image";
 import {BsFillArrowLeftCircleFill} from 'react-icons/bs';
 import {BsFillArrowRightCircleFill} from 'react-icons/bs';
+import { motion } from 'framer-motion';
+
 
 SwiperCore.use([Navigation]);
 
 export default function Slider({array,title,body}) {
     const [slidesPerView, setSlidesPerView] = useState(4);
     const swiperRef = useRef(null);
-    console.log(array)
+    // console.log(array)
   
     const handleResize = () => {
       const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
@@ -97,20 +99,25 @@ export default function Slider({array,title,body}) {
                 ref={swiperRef}
             >
                 {array.map((item,index) => {
-                  {/* console.log(item); */}
-                return (
+                  return(
                     <SwiperSlide key={index} className="flex flex-col items-center justify-center">
-                    <Image
-                        height={210}
-                        width={250}
-                        src={title!=='Homes guests love' ?  PropertTypes[index].image : Featured_Properties[index]?.image}
-                        alt={"noimg"}
-                        className="w-full vsm:h-[210px] xs:h-[145px] cursor-pointer rounded-md"
-                    />
-                    {body( {item} )} 
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 3, delay: index * 0.5 }}
+                    >
+                      <Image
+                          height={210}
+                          width={250}
+                          src={title!=='Homes guests love' ?  PropertTypes[index].image : Featured_Properties[index]?.image}
+                          alt={"noimg"}
+                          className="w-full vsm:h-[210px] xs:h-[145px] cursor-pointer rounded-md"
+                      />
+                      {body( {item} )} 
+                    </motion.div>
                     {/* Call the body function and pass the item */}
                     </SwiperSlide>
-                );
+                  );
                 })}
             </Swiper>
             {!hideNextButton && (

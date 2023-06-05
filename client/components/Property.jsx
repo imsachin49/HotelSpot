@@ -3,8 +3,9 @@ import { PropertTypes } from './dummyData';
 import Slider from './Slider';
 import useFetch from '@/hooks/usefetch';
 
+
 const bodyContent=({item})=>{
-  console.log(item)
+  // console.log(item)
   return (
     <div>
       <p className="text-[1.35rem] font-mono">{item?.type}</p>
@@ -14,7 +15,7 @@ const bodyContent=({item})=>{
 
 export default function Property() {
   const {data,loading,error,reFetch}=useFetch('https://hotelspot.vercel.app/api/hotels/countByType')
-  console.log(data)
+  // console.log(data)
   
   return (
     <div className="w-full my-20 flex items-center justify-center -mt-10" id='property'>
