@@ -16,10 +16,10 @@ and secure their ideal accommodations for their upcoming trips.
 ➣ Axios, Redux-tollkit, tailwindCSS  
 
 # ScreenShots
-![Web capture_9-6-2023_213240_localhost](https://github.com/imsachin49/HotelSpot/assets/108334265/0330604e-f51b-47e1-9de0-3c146e4258c1)
-![Web capture_9-6-2023_213617_localhost](https://github.com/imsachin49/HotelSpot/assets/108334265/7461a9ea-83f5-426c-93f0-aab7a10b3929)
-![all_results](https://github.com/imsachin49/HotelSpot/assets/108334265/3c1ba54c-ce50-4ca1-a490-3bf52fc4d40d)
-![single_hotel](https://github.com/imsachin49/HotelSpot/assets/108334265/50ef45c7-1b58-4368-8481-9f0756afcd30)
-![select_room](https://github.com/imsachin49/HotelSpot/assets/108334265/328fc610-3af0-4161-835e-be360e17c034)
-![zoomed_imges](https://github.com/imsachin49/HotelSpot/assets/108334265/a6c8bd5c-af0c-4cde-b324-1fd71619923c)
-![review](https://github.com/imsachin49/HotelSpot/assets/108334265/b9d48924-b06b-4110-b6d1-d089b9305fb9)
+![Web capture_9-6-2023_213240_localhost](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/f2e46332-36d2-4bf8-b9ac-1386b8915de0)
+![Web capture_9-6-2023_213617_localhost](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/996f5207-6e02-4d31-bc73-7475469e5bac)  
+![all_results](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/0a035d8b-15d2-43ae-a139-15571d3da4c6)  
+![single_hotel](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/643668c0-b6ca-4883-a6f0-5328561409bf)
+![select_room](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/cb14b73e-7bf2-4b1e-a2d6-a0b97b1c4eb6) 
+![zoomed_imges](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/8f3f4e9a-5185-4167-ab63-4c6a19d1baa7)  
+![review](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/6e7a559f-cb98-4031-9806-3fa7f85e66f1)  
