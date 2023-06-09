@@ -11,9 +11,9 @@ and secure their ideal accommodations for their upcoming trips.
 ➣ Add to Favorite  
 
 # Technologies/Libraries
-➣ React, Node, Express, MongoDB  
+➣ NextJs, Node, Express, MongoDB  
 ➣ Jwt, Bcryptjs,Stripe  
-➣ Axios, Redux-tollkit, tailwindCSS  
+➣ Axios, Redux-tollkit, tailwindCSS, Framer Motion  
 
 # ScreenShots
 ![Web capture_9-6-2023_213240_localhost](https://github.com/imsachin49/Full-Stack-Ecommerce/assets/108334265/f2e46332-36d2-4bf8-b9ac-1386b8915de0)
