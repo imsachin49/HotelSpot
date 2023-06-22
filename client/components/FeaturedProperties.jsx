@@ -24,7 +24,7 @@ const bodyContent=({item})=>{
 }
 
 export default function FeaturedProperties(){
-  const {data,loading,error,reFetch}=useFetch('https://hotelspot.vercel.app/api/hotels/getHotels?featured=true')
+  const {data,loading,error,reFetch}=useFetch('https://hotelspot-api.vercel.app/api/hotels/getHotels?featured=true')
   // console.log(data)
     return (
       <div className="w-full my-20 flex items-center justify-center -mt-10" id='featured'>

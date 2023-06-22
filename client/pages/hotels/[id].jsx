@@ -17,6 +17,9 @@ import Reserve from "@/components/modals/Reserve";
 import PopupLogin from '../../components/modals/PopupLogin'
 import Success from "@/components/modals/Success";
 import AddReview from "@/components/modals/AddReview";
+import { RWebShare } from "react-web-share";
+import SocialShare from "@/components/Share";
+import { BsShareFill } from "react-icons/bs";
 
 export default function Hotel(){
     const [open, setOpen] = useState(null);
@@ -66,7 +69,6 @@ export default function Hotel(){
         setSlideNumber(newSlideNumber)
     };
 
-
     useEffect(() => {
         const handleResize = () => {
             setIsSmall(window.innerWidth <= 768);
@@ -86,7 +88,7 @@ export default function Hotel(){
         }
     }
 
-    const {data,loading,error}=useFetch(`https://hotelspot.vercel.app/api/hotels/find/${id}`)
+    const {data,loading,error}=useFetch(`https://hotelspot-api.vercel.app/api/hotels/find/${id}`)
     console.log(data)
 
     return(
@@ -124,7 +126,11 @@ export default function Hotel(){
                             </div>
                         </div>
                         {/* middle section to show images */}
-                        <div className="p-3 flex flex-wrap space-y-1 justify-between">
+                        <div className="p-3 flex flex-wrap space-y-1 justify-between relative">
+                        <div className="absolute -top-8 bg-rose-400 shadow-lg right-5 flex items-center border border-rose-400 hover:bg-red-300 rounded-md px-2 mb-6">
+                            <BsShareFill size={14} color='white' className="cursor-pointer hover:text-blue-600 mr-1" />
+                            <SocialShare url={`http://localhost:3000/hotels/${id}`} />
+                        </div>    
                             {
                                 Photos.map((p,index)=>{
                                     return <div className="w-[33%]" key={index}>

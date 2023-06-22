@@ -10,7 +10,8 @@ const nextConfig = {
       'images.unsplash.com', 
       'img.freepik.com',
       'lh4.googleusercontent.com',
-      'plus.unsplash.com'
+      'plus.unsplash.com',
+      "www.shutterstock.com"
     ]
   }
 }

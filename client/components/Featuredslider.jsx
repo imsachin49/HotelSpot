@@ -18,7 +18,7 @@ SwiperCore.use([Navigation]);
 export default function FeaturedSlider() {
     const [slidesPerView, setSlidesPerView] = useState(4);
     const swiperRef = useRef(null);
-    const {data,loading,error,reFetch}=useFetch('https://hotelspot.vercel.app/api/hotels/countByCity?cities=new york,delhi,london,Singapore,Paris,Tokyo')
+    const {data,loading,error,reFetch}=useFetch('https://hotelspot-api.vercel.app/api/hotels/countByCity?cities=new york,delhi,london,Singapore,Paris,Tokyo')
   
     const handleResize = () => {
       const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;

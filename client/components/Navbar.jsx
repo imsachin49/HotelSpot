@@ -4,17 +4,29 @@ import { useState,useEffect } from "react"
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import {AiOutlineUser} from 'react-icons/ai' 
+import DiscountModal from "./modals/DiscountModal";
 
 const Navbar = ({isSmall,type}) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [openDiscountModal,setOpenDiscountModal]=useState(false);
   const router=useRouter();
   // console.log(router.asPath)
   const path=router.asPath;
   const user=useSelector(state=>state.user);
+  const isLoggedIn=user ? true : false;
+  const id=user?.user?._id;
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };  
+
+  const handleDiscount=()=>{
+    if(isLoggedIn){
+      setOpenDiscountModal(!openDiscountModal)
+    }else{
+      router.push('/login');
+    }
+  }
 
   return (
     <div className='w-full flex items-center justify-center mb-1 sticky top-0 z-[999]'>
@@ -24,10 +36,9 @@ const Navbar = ({isSmall,type}) => {
           {!isSmall &&<div className="flex items-center align-middle justify-center space-x-3">
             {type!=='login' && <Link href='/' className={`${path==='/' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex font-bold font-candara cursor-pointer px-2 py-[0.15rem] hover:text-rose-500 rounded-sm`}>Home</Link>}
             {type!=='login' && <Link href='/#featured' className={`${path==='/#featured' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-gray-600 cursor-pointer px-2 py-[0.15rem] hover:text-rose-500 rounded-sm`}>Featured</Link>}
-            {type!=='login' && <Link href='/#property' className={`${path==='/#property' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-gray-600 cursor-pointer px-2 py-[0.15rem] hover:text-rose-500 rounded-sm`}>Property</Link>}
-            {/* {type!=='login' && <Link href='#' className={`${path==='/#' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-gray-600 cursor-pointer px-2 py-[0.15rem] hover:text-rose-500 rounded-sm`}>Chat</Link>} */}
+            {type!=='login' && <Link href='/#' onClick={handleDiscount} className={`${path==='/#property' ? 'text-blue-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-gray-600 cursor-pointer px-2 py-[0.15rem] hover:text-blue-500 rounded-sm`}>Discount?</Link>}
             {!user?.user ? <Link href='/login' className={`${path==='/login' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-rose-400 border border-rose-200 shadow-lg rounded-[5px] bg-rose-500 items-center`}>Login<FiLogIn className="ml-[1px]"/></Link>
-            :<Link href='#' className={`${path==='/login' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-blue-400 border border-blue-200 shadow-lg rounded-[5px] bg-blue-500 items-center`}><AiOutlineUser className="mr-[2px]"/>{user?.user?.username}</Link>}
+            :<Link href="/profile/123" className={`${path==='/login' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-blue-400 border border-blue-200 shadow-lg rounded-[5px] bg-blue-500 items-center`}><AiOutlineUser className="mr-[2px]"/>{user?.user?.username}</Link>}
           </div>}
             {isSmall && <div className='ml-3 cursor-pointer px-3' onClick={toggleSidebar}>
             <svg className='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
@@ -50,7 +61,8 @@ const Navbar = ({isSmall,type}) => {
             :<Link href='#' className={`${path==='/login' ? 'text-rose-500 text-[1.15rem]' : 'text-gray-600 text-[1rem]' } flex text-[1rem] font-bold font-candara text-white cursor-pointer px-2 py-[0.2rem] hover:bg-blue-400 border border-blue-200 shadow-lg rounded-[5px] bg-blue-500 items-center`}><AiOutlineUser className="mr-[2px]"/>{user?.user?.username}</Link>}          </div>
         </div>}
       </div>
-    </div>
+      {openDiscountModal && <DiscountModal onClose={()=>setOpenDiscountModal(false)}/>}
+      </div>
   )
 }
 

@@ -37,7 +37,7 @@ export default function Hotels() {
     }, []);
 
     // console.log(isSmall)
-    const {data,loading,error,reFetch}=useFetch(`https://hotelspot.vercel.app/api/hotels/getHotels?city=${destination}&min=${price.min || 0}&max=${price.max || 999}`)
+    const {data,loading,error,reFetch}=useFetch(`https://hotelspot-api.vercel.app/api/hotels/getHotels?city=${destination}&min=${price.min || 0}&max=${price.max || 999}`)
     // console.log(data)
     
     return (

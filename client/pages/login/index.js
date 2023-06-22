@@ -33,7 +33,7 @@ export default function Login() {
         e.preventDefault();
         try {
             console.log(email,password);
-            const res=await axios.post('https://hotelspot.vercel.app/api/auth/login',{
+            const res=await axios.post('https://hotelspot-api.vercel.app/api/auth/login',{
                 email,password
             })
             dispatch(setLogin({
@@ -59,7 +59,7 @@ export default function Login() {
                 <form className="flex flex-col items-center justify-center space-y-2 w-full mt-5" onSubmit={handleSubmit}>
                     <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
                         <label className="text-md font-mono mb-1">Email Address</label>
-                        <input onChange={e=>setEmail(e.target.value)} value={email} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="email" required placeholder="Youe Email" />
+                        <input onChange={e=>setEmail(e.target.value)} value={email} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="email" required placeholder="Your Email" />
                     </div> 
                     <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
                         <label className="text-md font-mono mb-1">Password</label>
@@ -87,24 +87,24 @@ export default function Login() {
                         <div className="cursor-pointer border border-gray400 hover:border-blue-400 m-1 p-2">
                             <FcGoogle className="text-2xl" size={50} />
                         </div>
-                        // {
-                        //     signInMethod==='mail' ? <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
-                        //         <label className="text-md font-mono mb-1">Email Address</label>
-                        //         <input onChange={e=>setEmail(e.target.value)} value={email} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="email" required placeholder="Youe Email" />
-                        //  </div> :
-                        //     <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
-                        //         <label className="text-md font-mono mb-1">Phone Number</label>
-                        //         <input onChange={e=>setPhone(e.target.value)} value={phone} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="tel" required placeholder="Your Phone number" minLength={10} maxLength={10} />
-                        // </div>
-                        // }
-                        // {
-                        //     signInMethod==='mail' ? <div className="cursor-pointer border border-gray400 hover:border-blue-400 m-1 p-2" onClick={()=>setSignInMethod('phone')}>
-                        //     <MdPhoneAndroid className="text-2xl" size={50} />
-                        // </div> :
-                        // <div className="cursor-pointer border border-gray400 hover:border-blue-400 m-1 p-2" onClick={()=>setSignInMethod('mail')}>
-                        //     <MdEmail className="text-2xl" size={50} />
-                        // </div>
+                        {/*
+                            signInMethod==='mail' ? <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
+                                <label className="text-md font-mono mb-1">Email Address</label>
+                                <input onChange={e=>setEmail(e.target.value)} value={email} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="email" required placeholder="Youe Email" />
+                         </div> :
+                            <div className="flex flex-col lg:w-[30vw] md:w-[40vw] sm:w-[50vw] xs:w-[90vw]">
+                                <label className="text-md font-mono mb-1">Phone Number</label>
+                                <input onChange={e=>setPhone(e.target.value)} value={phone} className="border border-gray-400 rounded-sm p-2 outline-none focus:border-blue-500" type="tel" required placeholder="Your Phone number" minLength={10} maxLength={10} />
+                        </div>
                         }
+                        {
+                            signInMethod==='mail' ? <div className="cursor-pointer border border-gray400 hover:border-blue-400 m-1 p-2" onClick={()=>setSignInMethod('phone')}>
+                            <MdPhoneAndroid className="text-2xl" size={50} />
+                        </div> :
+                        <div className="cursor-pointer border border-gray400 hover:border-blue-400 m-1 p-2" onClick={()=>setSignInMethod('mail')}>
+                            <MdEmail className="text-2xl" size={50} />
+                        </div>
+                        */}
                     </div>
                 </div>
                 <div className="flex flex-col items-center space-y-2 w-full mt-5">

@@ -141,7 +141,7 @@ export default function Search({ isSmall }) {
         <div className={`relative flex ${isSmall ? "w-full" : "flex-1"} items-center justify-center bg-white rounded-md cursor-pointer`}>
           <div onClick={() => setOpenOptions(!openOptions)} className={`flex items-center w-full border ${isSmall ? 'justify-start ml-2' : 'justify-center'}`}>
             <RxPerson className="text-2xl text-black mr-[1px]" />
-            <div className="font-bold font-candara p-4 pl-1 text-lg">
+            <div className=" p-4 pl-1 text-md font-candara font-bold">
               {`${options.adult} adults . ${options.children} children . ${options.room} room`}
             </div>
           </div>

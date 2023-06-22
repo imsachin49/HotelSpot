@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import Success from './Success'
 
 export default function Reserve({onClose,hotelId}){
-    const {data,loading,error}=useFetch(`https://hotelspot.vercel.app/api/hotels/room/${hotelId}`)
+    const {data,loading,error}=useFetch(`https://hotelspot-api.vercel.app/api/hotels/room/${hotelId}`)
     console.log(data);  
     const [selectedRooms,setSelectedRooms]=useState([]);  
     const dates=useSelector(state=>state.search.dates)
@@ -46,7 +46,7 @@ export default function Reserve({onClose,hotelId}){
     const hanldeClick=async()=>{
         try {
             await Promise.all(selectedRooms.map(async roomId=>{
-                const res=await axios.patch(`https://hotelspot.vercel.app/api/rooms/availablity/${roomId}`,{dates:alldates})
+                const res=await axios.patch(`https://hotelspot-api.vercel.app/api/rooms/availablity/${roomId}`,{dates:alldates})
                 console.log(res.data)
                 return res.data;
             }))

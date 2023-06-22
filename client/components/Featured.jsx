@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Featured({isSmall}){  
 
-  const {data,loading,error,reFetch}=useFetch('https://hotelspot.vercel.app/api/hotels/countByCity?cities=new york,delhi,london,Singapore,Paris,Tokyo')
+  const {data,loading,error,reFetch}=useFetch('https://hotelspot-api.vercel.app/api/hotels/countByCity?cities=new york,delhi,london,Singapore,Paris,Tokyo')
 
   return(
     <div className="w-full my-20 flex items-center justify-center z-10">

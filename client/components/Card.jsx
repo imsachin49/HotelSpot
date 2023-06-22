@@ -24,7 +24,7 @@ export default function Card({item,index}){
 
     const handleLike=async()=>{
         try {
-            const res=await axios.put(`http://localhost:8800/api/hotels/like/${item._id}`);
+            const res=await axios.put(`https://hotelspot-api.vercel.app/api/hotels/like/${item._id}`);
             console.log(res.data);
             setIsLiked(!isLiked);
         } catch (error) {

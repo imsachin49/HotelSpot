@@ -14,7 +14,7 @@ const bodyContent=({item})=>{
 )}
 
 export default function Property() {
-  const {data,loading,error,reFetch}=useFetch('https://hotelspot.vercel.app/api/hotels/countByType')
+  const {data,loading,error,reFetch}=useFetch('https://hotelspot-api.vercel.app/api/hotels/countByType')
   // console.log(data)
   
   return (
